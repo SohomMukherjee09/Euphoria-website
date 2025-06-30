@@ -5,6 +5,7 @@ const bodyParser = require("body-parser")
 const port = 2000
 
 const productRouter = require('./Routes/product')
+const ar = require('./Routes/admin')
 const mongoose = require("mongoose")
 const expressFileUpload = require("express-fileupload")
 mongoose.connect("mongodb+srv://Sohom:Ss456123_@cluster0.371szjc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -14,6 +15,7 @@ app.use(bodyParser.urlencoded())
 app.use(bodyParser.json())
 app.use(expressFileUpload())
 app.use('/products',productRouter);
+app.use('/admin',ar);
 app.use(express.static('public'))
 
 app.get('/', (req, res) => {

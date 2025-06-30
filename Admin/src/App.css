@@ -1,3 +1,9 @@
 .pimg{
     width: 10vh;
 }
+.frm{
+    margin: 100px auto;
+    background-color: #eee;
+    border-radius: 12px;
+    padding: 42px;
+}
